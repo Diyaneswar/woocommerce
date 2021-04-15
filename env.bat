@@ -1,7 +1,7 @@
 
 
-set wc_key=ck_88109a594c830c8c50c696f9bfd2c7b4f32dccec
-set wc_sec=cs_9ff2fb6158b3be4dd83ef283290517ac437f6bcf
+set wc_key=ck_2f7e6117ecc9fbd99f0eb516610f6bf1a3a2648f
+set wc_sec=cs_46944a79dbd004d992330922b286b1d74ec86f4a
 
 
 set db_user=root
