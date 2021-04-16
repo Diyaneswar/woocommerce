@@ -1,6 +1,6 @@
 import pytest
 import logging as logger
-from woocomm_api.src.utilities.email_gen import email_and_passgen
+from woocomm_api.src.utilities.generic_utility import email_and_passgen
 from woocomm_api.src.helper.customer_helper import Customer_help
 from woocomm_api.src.dao.customerdao import Get_customer_byemail
 from woocomm_api.src.utilities.request_utility import Request_Utility

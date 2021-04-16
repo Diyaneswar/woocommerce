@@ -19,7 +19,7 @@ class Request_Utility(object):
         assert act_resp.status_code == expected_statuscode,"Expected is {} but actual is {}".format(expected_statuscode,act_resp.status_code)
         return act_resp
 
-    def get(self,endpoint,headers=None,expected_status_code=200):
+    def get(self,endpoint,payload=None,headers=None,expected_status_code=200):
         self.url=self.baseurl+endpoint
         if not headers:
             headers={"Content-type":"application/json"}

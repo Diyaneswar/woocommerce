@@ -16,6 +16,9 @@ def email_and_passgen():
 
     return {"email":email,"password":password}
 
+def create_randomsring(random_strlen):
+    return "".join(random.choices(string.ascii_lowercase,k=random_strlen))
+
 
 
 

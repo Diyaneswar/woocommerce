@@ -23,10 +23,8 @@ def test_get_prd_by_id():
     da_prd=Productdao().get_random_prd()
     ran_prd=da_prd[0]["ID"]
 
-
     #Initiating the get call
     prd_id = Product_help()
     prd_help=prd_id.get_product_by_id(ran_prd)
 
-    import pdb;pdb.set_trace()
     #verify the product
