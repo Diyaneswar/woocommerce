@@ -9,6 +9,6 @@ class Product_help(object):
 
         return self.req.get(endpoint=f"products/{product_id}",expected_status_code=201)
 
-    def call_product_by_filter(self,payload):
-
-        return self.req.get(endpoint=f"products",payload=payload)
+    def call_list_products(self,payload=None):
+        print(payload)
+        return self.req.get(endpoint="products",payload=payload)

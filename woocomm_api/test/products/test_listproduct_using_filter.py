@@ -9,15 +9,16 @@ class TestListProductUsingFilter():
     def test_list_prd_filter_after(self):
         #create payload
         payload={}
-        act_date=datetime.now().replace(microsecond=0)-timedelta(1)
+        act_date=datetime.now().replace(microsecond=0)-timedelta(20)
         correct_date_fmt=act_date.isoformat()
+
         payload['after']=correct_date_fmt
 
         #make the get call
-        prd_resp=Product_help().call_product_by_filter(payload['after'])
+        prd_resp=Product_help().call_list_products(payload)
 
         #verify the response in the database
-        db_resp=Productdao().get_product_using_filter(payload['after'])
+        db_resp=Productdao().get_product_using_filter(payload)
 
         #verify len of the response is same as in the database
         assert len(db_resp)==len(prd_resp),"Wrong data fetched for the date"

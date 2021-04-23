@@ -24,7 +24,7 @@ class Request_Utility(object):
         if not headers:
             headers={"Content-type":"application/json"}
         logger.debug("Initiating get request")
-        act_resp=requests.get(url=self.url,headers=headers,auth=self.keys)
+        act_resp=requests.get(url=self.url,headers=headers,payload=payload,auth=self.keys)
 
         assert act_resp.status_code==expected_status_code,"Expected is {} but actual is {}".format(expected_status_code,act_resp.status_code)
         return act_resp
